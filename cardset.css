@@ -1,0 +1,21 @@
+:root { --items: 3; /* кількість карток в рядку */ 
+        --indent: 30px; /* відступи між картками */ 
+    } 
+
+/* Сітка із застосуванням flex-box */
+
+.card-set { 
+    display: flex; 
+    flex-wrap: wrap;
+    margin: calc(-1 * var(--indent) / 2); 
+} 
+
+.card-set-item { 
+    flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items)); 
+    margin: calc(var(--indent) / 2); 
+} 
+
+/* До ul потрібно додати клас card-set а до li клас card-set-item І сітка
+створена. Даний приклад ви можете використовувати і для інших
+секцій де є картки перевизначаючи тільки змінну --items та задаючи потрібну вам
+кількість карток в рядку. */
